@@ -8,8 +8,13 @@ namespace DependencyInjection
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
+            Computer comp = new Computer();
+            comp.DiskDrive = new MechanicalDrive();
+            Console.WriteLine($"Drive type is {comp.DiskDrive.GetDriveType()}"); 
         }
     }
 }
